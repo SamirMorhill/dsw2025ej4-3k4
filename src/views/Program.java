@@ -10,7 +10,14 @@ public class Program {
 
     public static void main(String[] args) throws IllegalArgumentException, InvalidPropertiesFormatException {
         Persistencia.inicializar();
+        
+        new MenuViewModel().setVisible(true);
+        
+        CargarAnimalViewModel cargarAnimalVista = new CargarAnimalViewModel();
+        cargarAnimalVista.setVisible(false);
+        
         ListarAnimalesView view = new ListarAnimalesView();
-        view.setVisible(true);
+        view.setVisible(false);
+        
     }
 }
